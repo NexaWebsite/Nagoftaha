@@ -1,0 +1,253 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نامه شخصی از علی محمد کریمی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Vazirmatn', sans-serif;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .letter-card {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .academic-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+        }
+        
+        .reveal-button {
+            transition: all 0.2s ease;
+        }
+        
+        .reveal-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+        }
+        
+        .hidden-message {
+            display: none;
+        }
+        
+        .show-message {
+            display: block;
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .response-btn {
+            transition: all 0.2s ease;
+        }
+        
+        .response-btn:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="academic-bg">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-16 fade-in">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                نامه شخصی
+            </h1>
+            <p class="text-lg text-gray-600">مکاتبه خصوصی</p>
+        </div>
+
+        <!-- Main Letter -->
+        <div class="letter-card rounded-lg p-8 md:p-12 mb-8 fade-in">
+            <div class="mb-8">
+                <div class="bg-red-50 border border-red-200 rounded-md p-4 mb-6">
+                    <p class="text-sm text-red-700 font-medium">⚠️ نامه محرمانه</p>
+                    <p class="text-xs text-red-600 mt-1">این نامه شخصی و خصوصی است. لطفاً این لینک را به هیچ کس دیگری ارسال نکنید.</p>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800 mb-6">
+                    محترمه خانم،
+                </h2>
+            </div>
+            
+            <div class="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
+                <p>
+                    با سلام و احترام،
+                </p>
+                
+                <p>
+                    پس از مدت‌ها تأمل و بررسی احساسات خود، تصمیم گرفتم که صادقانه با شما در میان بگذارم که نسبت به شما احساسات خاصی پیدا کرده‌ام.
+                </p>
+                
+                <p>
+                    این احساسات در طول زمان شکل گرفته و به نقطه‌ای رسیده که نمی‌توانم آن را نادیده بگیرم.
+                </p>
+                
+                <p>
+                    امیدوارم که این صراحت مورد احترام شما قرار گیرد و بتوانیم در این باره گفتگو کنیم.
+                </p>
+            </div>
+            
+            <div class="text-center mt-8">
+                <button id="revealBtn" class="reveal-button bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md text-base font-medium">
+                    ادامه مطلب
+                </button>
+            </div>
+        </div>
+
+            <!-- Hidden Message -->
+            <div id="hiddenMessage" class="hidden-message">
+                <div class="letter-card rounded-lg p-8 md:p-12 mb-8">
+                    <div class="space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
+                        <p>
+                            به طور مشخص، باید بگویم که دوستتان دارم.
+                        </p>
+                        
+                        <p>
+                            این احساس در طول مدت آشنایی ما شکل گرفته و به تدریج قوی‌تر شده است. شخصیت، اخلاق و نگرش شما نسبت به زندگی مرا تحت تأثیر قرار داده است.
+                        </p>
+                        
+                        <p>
+                            می‌دانم که این موضوع ممکن است برایتان غیرمنتظره باشد، اما ترجیح دادم که صادق باشم تا در ابهام باقی بمانم.
+                        </p>
+                        
+                        <p>
+                            اگر این احساس متقابل است، خوشحال می‌شوم که بتوانیم در این مسیر با هم قدم برداریم. در غیر این صورت، احترام کامل به تصمیم شما خواهم گذاشت.
+                        </p>
+                        
+                        <div class="mt-8 pt-6 border-t border-gray-200">
+                            <p class="text-base font-medium text-gray-800">
+                                با احترام،
+                            </p>
+                            <p class="text-lg font-semibold text-gray-900 mt-2">
+                                علی محمد کریمی
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Response Section -->
+            <div id="responseSection" class="hidden-message">
+                <div class="letter-card rounded-lg p-8 md:p-12">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-6">
+                            پاسخ شما:
+                        </h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-2xl">
+                            <button class="response-btn bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-md font-medium text-sm" data-response="happy">
+                                خوشحال شدم
+                            </button>
+                            <button class="response-btn bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-md font-medium text-sm" data-response="love">
+                                من نیز همین احساس را دارم
+                            </button>
+                            <button class="response-btn bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-3 rounded-md font-medium text-sm" data-response="surprised">
+                                غیرمنتظره بود
+                            </button>
+                            <button class="response-btn bg-gray-600 hover:bg-gray-700 text-white px-4 py-3 rounded-md font-medium text-sm" data-response="think">
+                                نیاز به فکر دارم
+                            </button>
+                        </div>
+                        
+                        <div id="responseMessage" class="mt-6 p-4 rounded-md hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 pb-8">
+        <div class="text-center">
+            <div class="letter-card rounded-lg p-4 inline-block">
+                <p class="text-sm text-gray-600">
+                    طراحی شده توسط علی محمد کریمی
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal message functionality
+        document.getElementById('revealBtn').addEventListener('click', function() {
+            const hiddenMessage = document.getElementById('hiddenMessage');
+            const responseSection = document.getElementById('responseSection');
+            
+            hiddenMessage.classList.remove('hidden-message');
+            hiddenMessage.classList.add('show-message');
+            
+            setTimeout(() => {
+                responseSection.classList.remove('hidden-message');
+                responseSection.classList.add('show-message');
+            }, 800);
+        });
+
+        // Response buttons functionality
+        document.querySelectorAll('.response-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const response = this.getAttribute('data-response');
+                const responseMessage = document.getElementById('responseMessage');
+                
+                let message = '';
+                let bgClass = '';
+                let whatsappMessage = '';
+                
+                switch(response) {
+                    case 'happy':
+                        message = 'خوشحالم که این پیام مورد پسند شما قرار گرفت.';
+                        bgClass = 'bg-green-100 text-green-800';
+                        whatsappMessage = 'سلام علی محمد! نامه شما را خواندم و خوشحال شدم.';
+                        break;
+                    case 'love':
+                        message = 'بسیار خوشحالم که این احساس متقابل است.';
+                        bgClass = 'bg-blue-100 text-blue-800';
+                        whatsappMessage = 'سلام علی محمد! من نیز همین احساس را نسبت به شما دارم.';
+                        break;
+                    case 'surprised':
+                        message = 'درک می‌کنم که این موضوع غیرمنتظره بوده است.';
+                        bgClass = 'bg-yellow-100 text-yellow-800';
+                        whatsappMessage = 'سلام علی محمد! نامه شما غیرمنتظره بود. باید صحبت کنیم.';
+                        break;
+                    case 'think':
+                        message = 'کاملاً درک می‌کنم. وقت کافی برای تصمیم‌گیری بگیرید.';
+                        bgClass = 'bg-gray-100 text-gray-800';
+                        whatsappMessage = 'سلام علی محمد! نامه‌تان را خواندم. برای پاسخ نیاز به فکر دارم.';
+                        break;
+                }
+                
+                responseMessage.innerHTML = message + '<br><br><button onclick="sendToWhatsApp(\'' + whatsappMessage + '\')" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium mt-2">ارسال پیام</button>';
+                responseMessage.className = `mt-6 p-4 rounded-md ${bgClass}`;
+                responseMessage.classList.remove('hidden');
+            });
+        });
+
+        // WhatsApp send function
+        function sendToWhatsApp(message) {
+            const phoneNumber = '93764002319'; // شماره واتساپ علی محمد کریمی
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'979abbb9577df9e9',t:'MTc1Njk2MDAzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
